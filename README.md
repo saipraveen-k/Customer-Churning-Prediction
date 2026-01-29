@@ -1,161 +1,316 @@
-# Customer Churning Prediction
 
-A comprehensive machine learning project that predicts customer churn for a bank using various classification algorithms and hyperparameter optimization techniques.
 
-## 📊 Dataset
+## 📌 Overview
+This project predicts customer churn (the likelihood of a customer leaving a service) using machine learning models.  
+It helps businesses identify at-risk customers early and apply retention strategies to improve customer satisfaction.
 
-The project uses the "Churn Modeling" dataset containing 10,000 customer records with the following features:
+## ⚙️ Tech Stack
+- Python
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn (Logistic Regression, Random Forest, XGBoost)
+- Jupyter Notebook
 
-- **RowNumber**: Row index
-- **CustomerId**: Unique customer identifier  
-- **Surname**: Customer surname
-- **CreditScore**: Customer's credit score
-- **Geography**: Customer's country (France, Spain, Germany)
-- **Gender**: Customer's gender (Male, Female)
-- **Age**: Customer's age
-- **Tenure**: Number of years with the bank
-- **Balance**: Account balance
-- **NumOfProducts**: Number of products owned
-- **HasCrCard**: Has credit card (1/0)
-- **IsActiveMember**: Active membership status (1/0)
-- **EstimatedSalary**: Estimated salary
-- **Exited**: Churn status (1=exited, 0=retained) - **Target Variable**
+## 📂 Project Structure
+Customer-Churning-Prediction/
+│── data/ # dataset files
+│── notebooks/ # Jupyter notebooks for analysis & modeling
+│── src/ # Python scripts for preprocessing & model training
+│── requirements.txt # dependencies
+│── README.md
 
-## 🛠️ Algorithms Used
+bash
+Copy code
 
-### Primary Classification Algorithms
-1. **Logistic Regression**
-   - Linear classification algorithm
-   - Test accuracy: 80.0%
+## 🔧 Installation
+Clone the repository:
+```bash
+git clone https://github.com/saipraveen-k/Customer-Churning-Prediction.git
+cd Customer-Churning-Prediction
+Install dependencies:
 
-2. **Naive Bayes Classifier (GaussianNB)**
-   - Probabilistic classifier based on Bayes' theorem
-   - Test accuracy: 79.15%
+bash
+Copy code
+pip install -r requirements.txt
+▶️ Usage
+Run the Jupyter notebook:
 
-3. **Decision Tree Classifier**
-   - Tree-based classification algorithm
-   - Test accuracy: 100% (indicates overfitting)
+bash
+Copy code
+jupyter notebook notebooks/Customer_Churn_Prediction.ipynb
+📊 Example Output
+Accuracy: ~85% (Random Forest)
 
-4. **Random Forest Classifier**
-   - Ensemble learning method with multiple decision trees
-   - Base model test accuracy: 86.85%
+ROC-AUC Score: 0.88
 
-5. **K-Nearest Neighbors (KNN)**
-   - Instance-based learning algorithm
-   - Test accuracy: 86.4%
+Feature importance chart for churn drivers
 
-6. **Support Vector Machine (SVM)**
-   - Linear kernel SVM for classification
-   - Test accuracy: 80.45%
+🚀 Future Improvements
+ Deploy with Streamlit/Gradio for interactive predictions
 
-7. **XGBoost Classifier**
-   - Gradient boosting framework
-   - Test accuracy: 86.7%
+ Add deep learning models for improved performance
 
-### Advanced Techniques
-- **Hyperparameter Optimization**:
-  - RandomizedSearchCV for Random Forest
-  - GridSearchCV for fine-tuning
-- **Cross-validation**: 5-fold and 10-fold CV
-- **Feature Engineering**: Label encoding for categorical variables
+ Hyperparameter tuning with GridSearchCV
 
-## 📈 Model Performance
+📄 License
+This project is licensed under the MIT License.# Customer Churn Prediction 📉
 
-| Algorithm | Train Accuracy | Test Accuracy | ROC AUC Score |
-|-----------|----------------|---------------|---------------|
-| Logistic Regression | 78.8% | 80.0% | 0.520 |
-| Naive Bayes | 78.19% | 79.15% | 0.523 |
-| Decision Tree | 100% | 100% | 1.0 |
-| Random Forest | 99.96% | 86.85% | 0.858 |
-| KNN | 87.24% | 86.4% | 0.840 |
-| SVM | 80.45% | 80.45% | 0.523 |
-| XGBoost | 95.74% | 86.7% | 0.868 |
+## 📌 Overview
+This project predicts customer churn (the likelihood of a customer leaving a service) using machine learning models.  
+It helps businesses identify at-risk customers early and apply retention strategies to improve customer satisfaction.
 
-## 🔧 Implementation Details
+## ⚙️ Tech Stack
+- Python
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn (Logistic Regression, Random Forest, XGBoost)
+- Jupyter Notebook
 
-### Data Preprocessing
-- **Label Encoding**: Converted categorical variables (Geography, Gender) to numerical format
-- **Feature Selection**: Removed irrelevant columns (RowNumber, CustomerId, Surname)
-- **Train-Test Split**: 80% training, 20% testing
+## 📂 Project Structure
+Customer-Churning-Prediction/
+│── data/ # dataset files
+│── notebooks/ # Jupyter notebooks for analysis & modeling
+│── src/ # Python scripts for preprocessing & model training
+│── requirements.txt # dependencies
+│── README.md
 
-### Model Evaluation Metrics
-- **Accuracy Score**: Overall prediction accuracy
-- **ROC AUC Score**: Area under ROC curve for binary classification
-- **Confusion Matrix**: True positive, false positive, true negative, false negative counts
-- **Recall Score**: Ability to correctly identify positive cases
+bash
+Copy code
 
-### Hyperparameter Tuning
-The Random Forest model was extensively tuned using:
-- **RandomizedSearchCV**: 100 iterations with 5-fold cross-validation
-- **GridSearchCV**: Fine-tuned the best parameters with 10-fold cross-validation
-- **Optimal Parameters**: 
-  - criterion: 'entropy'
-  - max_depth: 894
-  - max_features: 'sqrt'
-  - min_samples_split: 14
+## 🔧 Installation
+Clone the repository:
+```bash
+git clone https://github.com/saipraveen-k/Customer-Churning-Prediction.git
+cd Customer-Churning-Prediction
+Install dependencies:
 
-## 📁 Project Structure
+bash
+Copy code
+pip install -r requirements.txt
+▶️ Usage
+Run the Jupyter notebook:
 
+bash
+Copy code
+jupyter notebook notebooks/Customer_Churn_Prediction.ipynb
+📊 Example Output
+Accuracy: ~85% (Random Forest)
+
+ROC-AUC Score: 0.88
+
+Feature importance chart for churn drivers
+
+🚀 Future Improvements
+ Deploy with Streamlit/Gradio for interactive predictions
+
+ Add deep learning models for improved performance
+
+ Hyperparameter tuning with GridSearchCV
+
+📄 License
+This project belongs to saipraveen-k.
+
+## 📌📌📌
+=======
+# Customer Churn Prediction
+
+## Overview
+This project predicts customer churn for a bank using various machine learning classification algorithms. It analyzes customer data to identify patterns that indicate whether a customer is likely to leave the service, helping businesses implement targeted retention strategies.
+
+## Dataset
+The project uses the "Churn Modeling" dataset with 10,000 customer records containing features such as:
+- Credit Score
+- Geography (France, Spain, Germany)
+- Gender
+- Age
+- Tenure
+- Balance
+- Number of Products
+- Credit Card Status
+- Active Membership
+- Estimated Salary
+- Exited (Target: 1=churned, 0=retained)
+
+## Algorithms Used
+- Logistic Regression
+- Naive Bayes
+- Decision Tree
+- Random Forest
+- K-Nearest Neighbors
+- Support Vector Machine
+- XGBoost
+
+## Model Performance
+| Algorithm          | Test Accuracy | ROC AUC Score |
+|--------------------|---------------|---------------|
+| Logistic Regression| 80.0%        | 0.520        |
+| Naive Bayes       | 79.15%       | 0.523        |
+| Decision Tree     | 100%         | 1.0          |
+| Random Forest     | 86.85%       | 0.858        |
+| KNN               | 86.4%        | 0.840        |
+| SVM               | 80.45%       | 0.523        |
+| XGBoost           | 86.7%        | 0.868        |
+
+## Implementation Details
+- Data preprocessing with label encoding for categorical variables
+- Feature selection removing irrelevant columns
+- 80/20 train-test split
+- Hyperparameter tuning using RandomizedSearchCV and GridSearchCV
+- Cross-validation techniques
+
+## Project Structure
 ```
 Customer-Churning-Prediction/
-├── Customer Churning Prediction.ipynb  # Main Jupyter notebook
+├── Customer Churning Prediction.ipynb  # Main notebook
 ├── Churn Modeling.csv                  # Dataset
 └── README.md                           # This file
 ```
 
-## 🚀 Getting Started
-
+## Getting Started
 ### Prerequisites
 - Python 3.7+
 - Jupyter Notebook
-- Required libraries:
-  - pandas
-  - numpy
-  - seaborn
-  - matplotlib
-  - scikit-learn
-  - xgboost
+- Libraries: pandas, numpy, scikit-learn, xgboost, matplotlib, seaborn
 
 ### Installation
 ```bash
-pip install pandas numpy seaborn matplotlib scikit-learn xgboost jupyter
+pip install pandas numpy scikit-learn xgboost matplotlib seaborn jupyter
 ```
 
-### Running the Analysis
-1. Clone or download the repository
+### Usage
+1. Clone the repository
 2. Navigate to the project directory
-3. Start Jupyter Notebook:
-   ```bash
-   jupyter notebook
-   ```
-4. Open "Customer Churning Prediction.ipynb"
-5. Run the cells sequentially
+3. Run `jupyter notebook`
+4. Open and run "Customer Churning Prediction.ipynb"
 
-## 📊 Key Insights
+## Key Insights
+- Random Forest and XGBoost achieved the highest accuracy (~87%)
+- Decision Tree overfits with 100% accuracy
+- Hyperparameter tuning improved model performance
+- Feature importance analysis can reveal key churn drivers
 
-- **Random Forest** and **XGBoost** performed best with ~87% test accuracy
-- **Decision Tree** showed perfect accuracy but likely overfits the training data
-- **Logistic Regression** and **SVM** provided baseline performance around 80%
-- **Hyperparameter tuning** significantly improved Random Forest performance
-- **Feature importance** analysis could provide insights into key churn drivers
+## Business Applications
+- Identify at-risk customers
+- Implement retention strategies
+- Optimize resource allocation
+- Reduce customer acquisition costs
 
-## 🎯 Business Applications
+## Future Improvements
+- Advanced feature engineering
+- Neural network models
+- Handle class imbalance with SMOTE
+- Model explainability with SHAP
+- Real-time prediction API deployment
 
-This model can help banks:
-- Identify customers at risk of churning
-- Implement targeted retention strategies
-- Optimize resource allocation for customer retention
-- Reduce customer acquisition costs by improving retention rates
+## License
+This project is open source under the MIT License.
+=======
 
-## 📝 Future Improvements
 
-- **Feature Engineering**: Create additional features from existing data
-- **Advanced Models**: Try neural networks, ensemble methods
-- **Imbalanced Data Handling**: Use SMOTE or other techniques for class imbalance
-- **Explainability**: Implement SHAP values for model interpretation
-- **Real-time Prediction**: Deploy as an API for real-time churn prediction
+## 📌 Overview
+This project predicts customer churn (the likelihood of a customer leaving a service) using machine learning models.  
+It helps businesses identify at-risk customers early and apply retention strategies to improve customer satisfaction.
 
-## 📄 License
+## ⚙️ Tech Stack
+- Python
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn (Logistic Regression, Random Forest, XGBoost)
+- Jupyter Notebook
 
-This project is open source and available under the MIT License.
+## 📂 Project Structure
+Customer-Churning-Prediction/
+│── data/ # dataset files
+│── notebooks/ # Jupyter notebooks for analysis & modeling
+│── src/ # Python scripts for preprocessing & model training
+│── requirements.txt # dependencies
+│── README.md
 
+bash
+Copy code
+
+## 🔧 Installation
+Clone the repository:
+```bash
+git clone https://github.com/saipraveen-k/Customer-Churning-Prediction.git
+cd Customer-Churning-Prediction
+Install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+▶️ Usage
+Run the Jupyter notebook:
+
+bash
+Copy code
+jupyter notebook notebooks/Customer_Churn_Prediction.ipynb
+📊 Example Output
+Accuracy: ~85% (Random Forest)
+
+ROC-AUC Score: 0.88
+
+Feature importance chart for churn drivers
+
+🚀 Future Improvements
+ Deploy with Streamlit/Gradio for interactive predictions
+
+ Add deep learning models for improved performance
+
+ Hyperparameter tuning with GridSearchCV
+
+📄 License
+This project is licensed under the MIT License.# Customer Churn Prediction 📉
+
+## 📌 Overview
+This project predicts customer churn (the likelihood of a customer leaving a service) using machine learning models.  
+It helps businesses identify at-risk customers early and apply retention strategies to improve customer satisfaction.
+
+## ⚙️ Tech Stack
+- Python
+- pandas, numpy, matplotlib, seaborn
+- scikit-learn (Logistic Regression, Random Forest, XGBoost)
+- Jupyter Notebook
+
+## 📂 Project Structure
+Customer-Churning-Prediction/
+│── data/ # dataset files
+│── notebooks/ # Jupyter notebooks for analysis & modeling
+│── src/ # Python scripts for preprocessing & model training
+│── requirements.txt # dependencies
+│── README.md
+
+bash
+Copy code
+
+## 🔧 Installation
+Clone the repository:
+```bash
+git clone https://github.com/saipraveen-k/Customer-Churning-Prediction.git
+cd Customer-Churning-Prediction
+Install dependencies:
+
+bash
+Copy code
+pip install -r requirements.txt
+▶️ Usage
+Run the Jupyter notebook:
+
+bash
+Copy code
+jupyter notebook notebooks/Customer_Churn_Prediction.ipynb
+📊 Example Output
+Accuracy: ~85% (Random Forest)
+
+ROC-AUC Score: 0.88
+
+Feature importance chart for churn drivers
+
+🚀 Future Improvements
+ Deploy with Streamlit/Gradio for interactive predictions
+
+ Add deep learning models for improved performance
+
+ Hyperparameter tuning with GridSearchCV
+
+📄 License
+This project belongs to saipraveen-k.
+
+## 📌📌📌
